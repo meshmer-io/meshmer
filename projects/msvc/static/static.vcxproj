@@ -198,12 +198,14 @@
     <ClInclude Include="..\..\..\include\meshmer\ds\lf\queue.h" />
     <ClInclude Include="..\..\..\include\meshmer\ds\lf\stack.h" />
     <ClInclude Include="..\..\..\include\meshmer\mm\mm.h" />
+    <ClInclude Include="..\..\..\include\meshmer\mm\mpool.h" />
     <ClInclude Include="..\..\..\include\meshmer\test\base.h" />
     <ClInclude Include="..\..\..\include\meshmer\test\test.h" />
     <ClInclude Include="..\..\..\src\atomic\include\cas.h" />
     <ClInclude Include="..\..\..\src\ds\lf\include\queue.h" />
     <ClInclude Include="..\..\..\src\ds\lf\include\stack.h" />
     <ClInclude Include="..\..\..\src\mm\include\mm.h" />
+    <ClInclude Include="..\..\..\src\mm\include\mpool.h" />
     <ClInclude Include="..\..\..\src\mm\msvc\user\include\mm.h" />
   </ItemGroup>
   <ItemGroup>
@@ -293,6 +295,28 @@
       <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)mm\</AssemblerListingLocation>
       <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)mm\</ObjectFileName>
       <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)mm\mm.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)mm\</XMLDocumentationFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mm\mpool.c">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)mm\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)mm\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)mm\mpool.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)mm\</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)mm\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)mm\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)mm\mpool.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)mm\</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)mm\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)mm\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)mm\mpool.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)mm\</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)mm\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)mm\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)mm\mpool.pdb</ProgramDataBaseFileName>
       <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)mm\</XMLDocumentationFileName>
     </ClCompile>
     <ClCompile Include="..\..\..\src\mm\msvc\user\mm.c">

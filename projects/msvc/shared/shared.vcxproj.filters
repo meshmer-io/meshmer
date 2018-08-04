@@ -134,6 +134,12 @@
     <ClInclude Include="..\..\..\src\ds\lf\include\queue.h">
       <Filter>Source Files\ds\lf\include</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\meshmer\mm\mpool.h">
+      <Filter>Header Files\meshmer\mm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mm\include\mpool.h">
+      <Filter>Source Files\mm\include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\src\atomic\cas.c">
@@ -150,6 +156,9 @@
     </ClCompile>
     <ClCompile Include="..\..\..\src\ds\lf\queue.c">
       <Filter>Source Files\ds\lf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mm\mpool.c">
+      <Filter>Source Files\mm</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
