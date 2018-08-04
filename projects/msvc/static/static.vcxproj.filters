@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Source Files\atomic">
+      <UniqueIdentifier>{67c51790-4c0f-47ee-9c98-3c65a49e8ebe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mm">
+      <UniqueIdentifier>{5e05743f-e5f9-415a-826e-f81f085b5acc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\atomic\include">
+      <UniqueIdentifier>{991f5937-848d-4490-9d91-b7a0bc378bb0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\atomic\msvc">
+      <UniqueIdentifier>{ee3a1909-16ec-44a4-8d68-d2b226618c7f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\atomic\msvc\x86_64">
+      <UniqueIdentifier>{bedf06a8-f52b-4c4c-a889-fde668e00e13}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mm\include">
+      <UniqueIdentifier>{cbcea831-43a8-4606-921e-d5434ce4a4b7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mm\msvc">
+      <UniqueIdentifier>{5afde313-f68d-4d5f-b558-9ca1cd13dd95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mm\msvc\user">
+      <UniqueIdentifier>{4fee4b59-fb91-4685-8682-f1cd534fa223}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\mm\msvc\user\include">
+      <UniqueIdentifier>{76c0bba9-ed4b-4fe0-b47e-82e07ae160f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\meshmer">
+      <UniqueIdentifier>{4bc6a56e-db63-47aa-ae8a-eca67cbf5569}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\meshmer\atomic">
+      <UniqueIdentifier>{49705673-a922-473d-b53c-8bbf07ff6d1b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\meshmer\common">
+      <UniqueIdentifier>{a66b8d78-4e7f-4bfc-b31a-ff8cc2cdac80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\meshmer\mm">
+      <UniqueIdentifier>{43320a69-8e0c-4905-87c1-e40862f24a5b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\meshmer\test">
+      <UniqueIdentifier>{1f6da805-d9b6-4e26-8bf8-8f38b2948e7c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\meshmer\common\msvc">
+      <UniqueIdentifier>{31a5bdbc-663b-490d-9076-8885871aa5e5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\meshmer\ds">
+      <UniqueIdentifier>{38414187-b080-4abc-9ff4-bb8b841809d0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\meshmer\ds\lf">
+      <UniqueIdentifier>{697bbc6d-def1-43f7-a18b-077cc50f42d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ds">
+      <UniqueIdentifier>{484bd7e4-1a2d-434f-af92-ae179f0426f6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ds\lf">
+      <UniqueIdentifier>{84e52dad-b668-40e6-a5a1-0d7c1a6b4e25}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\ds\lf\include">
+      <UniqueIdentifier>{c2788b5b-3887-4173-823b-bc960dba34bc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\atomic\msvc\x86">
+      <UniqueIdentifier>{e98e5d82-8d63-4a41-985a-ea70968c25c3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <YASM Include="..\..\..\src\atomic\msvc\x86_64\cas.S">
+      <Filter>Source Files\atomic\msvc\x86_64</Filter>
+    </YASM>
+    <YASM Include="..\..\..\src\atomic\msvc\x86\cas.S" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\src\atomic\include\cas.h">
+      <Filter>Source Files\atomic\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mm\include\mm.h">
+      <Filter>Source Files\mm\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\mm\msvc\user\include\mm.h">
+      <Filter>Source Files\mm\msvc\user\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\meshmer\atomic\cas.h">
+      <Filter>Header Files\meshmer\atomic</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\meshmer\common\macros.h">
+      <Filter>Header Files\meshmer\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\meshmer\common\types.h">
+      <Filter>Header Files\meshmer\common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\meshmer\common\msvc\macros.h">
+      <Filter>Header Files\meshmer\common\msvc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\meshmer\common\msvc\types.h">
+      <Filter>Header Files\meshmer\common\msvc</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\meshmer\mm\mm.h">
+      <Filter>Header Files\meshmer\mm</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\meshmer\test\base.h">
+      <Filter>Header Files\meshmer\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\meshmer\test\test.h">
+      <Filter>Header Files\meshmer\test</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\meshmer\ds\lf\stack.h">
+      <Filter>Header Files\meshmer\ds\lf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ds\lf\include\stack.h">
+      <Filter>Source Files\ds\lf\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\meshmer\ds\lf\queue.h">
+      <Filter>Header Files\meshmer\ds\lf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\ds\lf\include\queue.h">
+      <Filter>Source Files\ds\lf\include</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\atomic\cas.c">
+      <Filter>Source Files\atomic</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mm\mm.c">
+      <Filter>Source Files\mm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mm\msvc\user\mm.c">
+      <Filter>Source Files\mm\msvc\user</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ds\lf\stack.c">
+      <Filter>Source Files\ds\lf</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ds\lf\queue.c">
+      <Filter>Source Files\ds\lf</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,336 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\packages\vsyasm.1.3.0.3\build\vsyasm.props" Condition="Exists('..\..\..\packages\vsyasm.1.3.0.3\build\vsyasm.props')" />
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{2F74F34A-8539-44F3-AB24-2F3B498DA8EB}</ProjectGuid>
+    <RootNamespace>shared</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17134.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\meshmer.props" />
+    <Import Project="..\debug.props" />
+    <Import Project="..\x86.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\meshmer.props" />
+    <Import Project="..\release.props" />
+    <Import Project="..\x86.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\meshmer.props" />
+    <Import Project="..\debug.props" />
+    <Import Project="..\x86_64.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\meshmer.props" />
+    <Import Project="..\release.props" />
+    <Import Project="..\x86_64.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>meshmer</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>meshmer</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>meshmer</TargetName>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>meshmer</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>MM_SHARED_OBJECT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>MM_SHARED_OBJECT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>MM_SHARED_OBJECT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <PreprocessorDefinitions>MM_SHARED_OBJECT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <YASM Include="..\..\..\src\atomic\msvc\x86_64\cas.S">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</ExcludedFromBuild>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)atomic\msvc\x86_64\</ObjectFile>
+      <PreProc Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">1</PreProc>
+      <Parser Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">1</Parser>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)atomic\msvc\x86_64\</ObjectFile>
+      <PreProc Condition="'$(Configuration)|$(Platform)'=='Release|x64'">1</PreProc>
+      <Parser Condition="'$(Configuration)|$(Platform)'=='Release|x64'">1</Parser>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)atomic\msvc\x86_64\</ObjectFile>
+      <PreProc Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">1</PreProc>
+      <Parser Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">1</Parser>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)atomic\msvc\x86_64\</ObjectFile>
+      <PreProc Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</PreProc>
+      <Parser Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</Parser>
+      <Debug Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</Debug>
+      <Debug Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</Debug>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">-f win64 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">-f win64 %(AdditionalOptions)</AdditionalOptions>
+    </YASM>
+    <YASM Include="..\..\..\src\atomic\msvc\x86\cas.S">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)atomic\msvc\x86\</ObjectFile>
+      <PreProc Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">1</PreProc>
+      <Parser Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">1</Parser>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)atomic\msvc\x86\</ObjectFile>
+      <PreProc Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</PreProc>
+      <Parser Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">1</Parser>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)atomic\msvc\x86\</ObjectFile>
+      <PreProc Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">1</PreProc>
+      <Parser Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">1</Parser>
+      <ObjectFile Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)atomic\msvc\x86\</ObjectFile>
+      <PreProc Condition="'$(Configuration)|$(Platform)'=='Release|x64'">1</PreProc>
+      <Parser Condition="'$(Configuration)|$(Platform)'=='Release|x64'">1</Parser>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">-f win32 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">-f win32 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">-f win32 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Release|x64'">-f win32 %(AdditionalOptions)</AdditionalOptions>
+      <Debug Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</Debug>
+      <Debug Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</Debug>
+    </YASM>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\include\meshmer\atomic\cas.h" />
+    <ClInclude Include="..\..\..\include\meshmer\common\macros.h" />
+    <ClInclude Include="..\..\..\include\meshmer\common\msvc\macros.h" />
+    <ClInclude Include="..\..\..\include\meshmer\common\msvc\types.h" />
+    <ClInclude Include="..\..\..\include\meshmer\common\types.h" />
+    <ClInclude Include="..\..\..\include\meshmer\ds\lf\queue.h" />
+    <ClInclude Include="..\..\..\include\meshmer\ds\lf\stack.h" />
+    <ClInclude Include="..\..\..\include\meshmer\mm\mm.h" />
+    <ClInclude Include="..\..\..\include\meshmer\test\base.h" />
+    <ClInclude Include="..\..\..\include\meshmer\test\test.h" />
+    <ClInclude Include="..\..\..\src\atomic\include\cas.h" />
+    <ClInclude Include="..\..\..\src\ds\lf\include\queue.h" />
+    <ClInclude Include="..\..\..\src\ds\lf\include\stack.h" />
+    <ClInclude Include="..\..\..\src\mm\include\mm.h" />
+    <ClInclude Include="..\..\..\src\mm\msvc\user\include\mm.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\src\atomic\cas.c">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)atomic\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)atomic\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)atomic\cas.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)atomic\</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)atomic\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)atomic\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)atomic\cas.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)atomic\</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)atomic\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)atomic\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)atomic\cas.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)atomic\</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)atomic\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)atomic\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)atomic\cas.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)atomic\</XMLDocumentationFileName>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ds\lf\queue.c">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ds\lf\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ds\lf\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ds\lf\queue.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ds\lf\</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)ds\lf\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)ds\lf\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)ds\lf\queue.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)ds\lf\</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)ds\lf\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)ds\lf\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)ds\lf\queue.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)ds\lf\</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)ds\lf\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)ds\lf\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)ds\lf\queue.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)ds\lf\</XMLDocumentationFileName>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\ds\lf\stack.c">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ds\lf\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ds\lf\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ds\lf\stack.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)ds\lf\</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)ds\lf\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)ds\lf\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)ds\lf\stack.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)ds\lf\</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)ds\lf\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)ds\lf\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)ds\lf\stack.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)ds\lf\</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)ds\lf\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)ds\lf\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)ds\lf\stack.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)ds\lf\</XMLDocumentationFileName>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mm\mm.c">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)mm\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)mm\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)mm\mm.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)mm\</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)mm\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)mm\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)mm\mm.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)mm\</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)mm\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)mm\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)mm\mm.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)mm\</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)mm\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)mm\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)mm\mm.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)mm\</XMLDocumentationFileName>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\mm\msvc\user\mm.c">
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)mm\msvc\user\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)mm\msvc\user\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)mm\msvc\user\mm.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)mm\msvc\user\</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)mm\msvc\user\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)mm\msvc\user\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)mm\msvc\user\mm.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)mm\msvc\user\</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)mm\msvc\user\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)mm\msvc\user\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)mm\msvc\user\mm.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(IntDir)mm\msvc\user\</XMLDocumentationFileName>
+      <AssemblerListingLocation Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)mm\msvc\user\</AssemblerListingLocation>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)mm\msvc\user\</ObjectFileName>
+      <ProgramDataBaseFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)mm\msvc\user\mm.pdb</ProgramDataBaseFileName>
+      <XMLDocumentationFileName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(IntDir)mm\msvc\user\</XMLDocumentationFileName>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">CompileAsC</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">CompileAsC</CompileAs>
+    </ClCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="..\..\..\packages\vsyasm.1.3.0.3\build\vsyasm.targets" Condition="Exists('..\..\..\packages\vsyasm.1.3.0.3\build\vsyasm.targets')" />
+  </ImportGroup>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\packages\vsyasm.1.3.0.3\build\vsyasm.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\vsyasm.1.3.0.3\build\vsyasm.props'))" />
+    <Error Condition="!Exists('..\..\..\packages\vsyasm.1.3.0.3\build\vsyasm.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\vsyasm.1.3.0.3\build\vsyasm.targets'))" />
+  </Target>
+</Project>
