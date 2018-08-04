@@ -80,7 +80,9 @@
     <YASM Include="..\..\..\src\atomic\msvc\x86_64\cas.S">
       <Filter>Source Files\atomic\msvc\x86_64</Filter>
     </YASM>
-    <YASM Include="..\..\..\src\atomic\msvc\x86\cas.S" />
+    <YASM Include="..\..\..\src\atomic\msvc\x86\cas.S">
+      <Filter>Source Files\atomic\msvc\x86</Filter>
+    </YASM>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\..\src\atomic\include\cas.h">
