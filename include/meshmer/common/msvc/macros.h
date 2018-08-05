@@ -7,9 +7,12 @@
 #  include <tchar.h>
 # endif
 
-# define MM_IN    _In_
-# define MM_OUT   _Out_
-# define MM_INOUT _Inout_
+# define MM_IN        _In_
+# define MM_IN_OPT    _In_opt_
+# define MM_OUT       _Out_
+# define MM_OUT_OPT   _Out_opt_
+# define MM_INOUT     _Inout_
+# define MM_INOUT_OPT _Inout_opt_
 
 # define MM_CALLBACK(__result__, __callback_name__, __parameters__)     \
   typedef __result__ (__stdcall *__callback_name__) __parameters__

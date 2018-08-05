@@ -10,14 +10,11 @@ MM_STATIC_FUNCTION(void, _mmi_lf_stack_push, (MM_IN p_mmi_lf_stack_head_t p_head
   _mmi_lf_stack_head_t s_old_head = {p_head->p_head, p_head->n_version};
   _mmi_lf_stack_head_t s_new_head;
 
-  for (;;) {
+  do {
     p_node->p_next       = s_old_head.p_head;
     s_new_head.p_head    = p_node;
     s_new_head.n_version = s_old_head.n_version + 1;
-
-    if (MM_TEST(mm_atomic_dcas(p_head, &s_old_head, &s_new_head)))
-      return;
-  }
+  } while (MM_TEST(!mm_atomic_dcas(p_head, &s_old_head, &s_new_head)));
 }
 
 MM_STATIC_FUNCTION(p_mmi_lf_stack_node_t, _mmi_lf_stack_pop, (MM_IN p_mmi_lf_stack_head_t p_head)) {

@@ -35,14 +35,11 @@ MM_INTERNAL_FUNCTION(void, _mmi_mm_release_quota, (MM_IN mm_mm_t   h_mm,
 
   n_old_reserved = h_mm->n_reserved;
 
-  for (;;) {
+  do {
     MM_ASSERT(n_old_reserved >= n_size);
 
     n_new_reserved = n_old_reserved - n_size;
-
-    if (MM_TEST(mm_atomic_cas_64(&h_mm->n_reserved, &n_old_reserved, &n_new_reserved)))
-      return;
-  }
+  } while (MM_TEST(!mm_atomic_cas_64(&h_mm->n_reserved, &n_old_reserved, &n_new_reserved)));
 }
 
 MM_TEST_BASE_END

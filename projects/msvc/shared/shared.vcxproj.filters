@@ -76,6 +76,36 @@
     <Filter Include="Source Files\atomic\msvc\x86">
       <UniqueIdentifier>{d7df81f4-7d9f-46f3-b3b0-af9ddbf8cf9c}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\meshmer\thread">
+      <UniqueIdentifier>{acc4ddbe-4d99-45c7-a3c3-f8060cb93b92}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\thread">
+      <UniqueIdentifier>{e486367f-ae68-4f03-9bc3-979debfcf355}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\thread\msvc">
+      <UniqueIdentifier>{6559b7ca-f3bf-4ed1-851f-ecbb93eea6da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\thread\msvc\user">
+      <UniqueIdentifier>{2d066afe-a8fb-4051-9543-eda5a968d205}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\meshmer\sync">
+      <UniqueIdentifier>{7d8942fa-bfd8-4de2-b460-39479819eb10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sync">
+      <UniqueIdentifier>{036e6fd4-d706-49fe-b769-d1d87ddd1002}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sync\msvc">
+      <UniqueIdentifier>{5e929855-2b5b-417c-ae84-85dba4fb4cfa}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sync\msvc\user">
+      <UniqueIdentifier>{5a38ed25-7c6b-4d0a-a3ec-5d3be287456c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\sync\msvc\user\include">
+      <UniqueIdentifier>{7ba61496-013d-4db7-87f0-003cdbf81454}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Source Files\thread\include">
+      <UniqueIdentifier>{bd8a5bab-ac9d-4b53-b211-b1df2ec5c608}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
@@ -140,6 +170,21 @@
     <ClInclude Include="..\..\..\src\mm\include\mpool.h">
       <Filter>Source Files\mm\include</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\include\meshmer\thread\thread.h">
+      <Filter>Header Files\meshmer\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\meshmer\thread\tpool.h">
+      <Filter>Header Files\meshmer\thread</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\include\meshmer\sync\event.h">
+      <Filter>Header Files\meshmer\sync</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\sync\msvc\user\include\event.h">
+      <Filter>Source Files\sync\msvc\user\include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\src\thread\include\tpool.h">
+      <Filter>Source Files\thread\include</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\..\src\atomic\cas.c">
@@ -159,6 +204,15 @@
     </ClCompile>
     <ClCompile Include="..\..\..\src\mm\mpool.c">
       <Filter>Source Files\mm</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\thread\msvc\user\thread.c">
+      <Filter>Source Files\thread\msvc\user</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\sync\msvc\user\event.c">
+      <Filter>Source Files\sync\msvc\user</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\src\thread\tpool.c">
+      <Filter>Source Files\thread</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
