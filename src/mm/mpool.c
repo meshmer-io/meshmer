@@ -73,6 +73,7 @@ MM_FUNCTION(mm_pvoid_t, mm_mpool_borrow_trace, (MM_IN mm_mpool_t  h_mpool,
                                                 MM_IN mm_string_t sz_file_name,
                                                 MM_IN mm_uint32_t n_line_number)) {
   MM_ASSERT(sz_file_name);
+  MM_ASSERT(n_line_number);
 
   return mm_mpool_borrow(h_mpool);
 }
@@ -82,6 +83,7 @@ MM_FUNCTION(void, mm_mpool_return_trace, (MM_IN mm_mpool_t  h_mpool,
                                           MM_IN mm_string_t sz_file_name,
                                           MM_IN mm_uint32_t n_line_number)) {
   MM_ASSERT(sz_file_name);
+  MM_ASSERT(n_line_number);
 
   mm_mpool_return(h_mpool, p_element);
 }

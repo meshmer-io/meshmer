@@ -126,6 +126,7 @@ MM_FUNCTION(mm_pvoid_t, mm_mm_allocate_trace, (MM_IN mm_mm_t     h_mm,
                                                MM_IN mm_string_t sz_file_name,
                                                MM_IN mm_uint32_t n_line_number)) {
   MM_ASSERT(sz_file_name);
+  MM_ASSERT(n_line_number);
 
   return mm_mm_allocate(h_mm, n_size);
 }
@@ -136,6 +137,7 @@ MM_FUNCTION(void, mm_mm_free_trace, (MM_IN mm_mm_t     h_mm,
                                      MM_IN mm_string_t sz_file_name,
                                      MM_IN mm_uint32_t n_line_number)) {
   MM_ASSERT(sz_file_name);
+  MM_ASSERT(n_line_number);
 
   mm_mm_free(h_mm, p_buffer, n_size);
 }

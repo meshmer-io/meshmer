@@ -11,6 +11,10 @@
       <StringPooling>true</StringPooling>
       <CallingConvention>StdCall</CallingConvention>
       <PreprocessorDefinitions>MM_MSVC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+      <TreatWarningAsError>true</TreatWarningAsError>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <DisableSpecificWarnings>4464;4255;4668;4820;4706;4204;4711</DisableSpecificWarnings>
     </ClCompile>
   </ItemDefinitionGroup>
   <ItemGroup />

@@ -114,8 +114,7 @@ MM_STATIC_FUNCTION(p_mmi_lf_queue_node_t, _mmi_lf_queue_borrow_node, (MM_IN mm_l
   return p_node;
 }
 
-MM_STATIC_FUNCTION(mm_bool_t, _mmi_lf_queue_head_initialize, (MM_IN mm_mm_t               h_mm,
-                                                              MM_IN mm_lf_queue_t         h_queue,
+MM_STATIC_FUNCTION(mm_bool_t, _mmi_lf_queue_head_initialize, (MM_IN mm_lf_queue_t         h_queue,
                                                               MM_IN p_mmi_lf_queue_head_t p_head)) {
   p_mmi_lf_queue_node_t p_node = _mmi_lf_queue_borrow_node(h_queue);
 
@@ -139,8 +138,8 @@ MM_FUNCTION(mm_lf_queue_t, mm_lf_queue_create, (MM_IN mm_mm_t h_mm)) {
   h_queue = (mm_lf_queue_t)MM_MM_ALLOCATE(h_mm, sizeof (_mm_lf_queue_t));
 
   if (MM_TEST(h_queue)) {
-    if (MM_TEST(_mmi_lf_queue_head_initialize(h_mm, h_queue, &h_queue->s_head)) &&
-        MM_TEST(_mmi_lf_queue_head_initialize(h_mm, h_queue, &h_queue->s_free_head))) {
+    if (MM_TEST(_mmi_lf_queue_head_initialize(h_queue, &h_queue->s_head)) &&
+        MM_TEST(_mmi_lf_queue_head_initialize(h_queue, &h_queue->s_free_head))) {
       h_queue->h_mm = h_mm;
 
       return h_queue;
